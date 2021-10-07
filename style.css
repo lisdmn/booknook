@@ -1,0 +1,295 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+    position: relative;
+}
+
+p {
+    padding: 40px;
+}
+
+#nopad {
+    padding: 0px;
+    line-height: 40px;
+}
+
+#main {
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner {
+    float: left;
+    height: 80px;
+    width: 100%;
+    background: #c2887d;
+    position: relative;
+    font-size: 70px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 40px;
+    color: #292721;
+    text-shadow: 3px 2px #c4bfaf;
+    z-index: 1;
+    padding-top: 40px;
+    padding-left: 20px;
+}
+
+.contenu {
+    float: left;
+    background: #FFFFFF;
+    width: auto;
+    height: auto;
+    position: relative;
+    margin-left: 160px;
+    margin-bottom: 100px;
+    font-family: 'Lato', sans-serif;
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+h1 {
+    font-family: 'Buenard', serif;
+    margin-left: 70px;
+    margin-top: 50px;
+    margin-right: 70px;
+}
+
+h2 {
+    font-family: 'Buenard', serif;
+    margin-left: 60px;
+    margin-top: 50px;
+    margin-right: 40px;
+    font-size: 25px;
+}
+
+#menu {
+    background: #7DC2AB;
+    width: 150px;
+    height: 100vh;
+    float: left;
+    position: fixed;
+}
+
+.footer {
+    z-index: -1;
+    height: 40px;
+    width: 100%;
+    background: #7d94c2;
+    position: absolute;
+    bottom: 0;
+    text-align: right;
+    
+}
+
+ul {
+    padding-top: 130px;
+    list-style-type: none;
+}
+
+li {
+    color: #421410;
+    text-align: center;
+    letter-spacing: 0.2em;
+    line-height: 2em;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom:35px;
+}
+
+#goTop {
+    position: fixed;
+    top: 65px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    left: 50px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.pgrdm {
+    margin-left: 45px;
+}
+
+#empty {
+    margin-left: 40px;
+}
+
+#btn1, #empty {
+    background-color: #A5CBED;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.active {
+    background-color:#9fc9bb;
+}
+
+#pennac {
+    background-color: #cfb0c6;
+    margin: 0 auto;
+    display: block;
+    width: max-content;
+    margin-top: 80px;
+    font-style: italic;
+    font-size: 14px;
+    border-radius: 20px;
+}
+
+#cittitre {
+    padding-bottom: 3px;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+#fin {
+    padding-top: 0px;
+}
+
+.gridbooks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 20px;
+    padding-left: 60px;
+}
+
+.worldimg { 
+    grid-area: 1 / 1 / 2 / 2; 
+}
+
+.worldtxt { 
+    grid-area: 1 / 2 / 2 / 4;
+    display: none; 
+}
+
+.wellsimg { 
+    grid-area: 2 / 3 / 3 / 4; 
+}
+
+.wellstxt { 
+    grid-area: 2 / 1 / 3 / 3; 
+    display: none; 
+}
+
+.hillimg { 
+    grid-area: 3 / 1 / 4 / 2; 
+}
+
+.hilltxt {
+    grid-area: 3 / 2 / 4 / 4; 
+    display: none; 
+}
+
+.tomimg { 
+    grid-area: 4 / 3 / 5 / 4; 
+}
+
+.tomtxt { 
+    grid-area: 4 / 1 / 5 / 3; 
+    display: none; 
+}
+
+.rlsimg { 
+    grid-area: 5 / 1 / 6 / 2; 
+}
+
+.rlstxt { 
+    grid-area: 5 / 2 / 6 / 4; 
+    display: none; 
+}
+
+.gridbooks div {
+    height: 450px;
+}
+
+.gridbooks img {
+    cursor: pointer;
+}
+
+
+@media (max-width: 650px) {
+    .banner {
+        height: 60px;
+        font-size: 35px;
+        line-height: 60px;
+        padding-top: 0;
+    }
+
+    #menu {
+        float: none;
+        width: 100%;
+        height: 35px;
+        position: sticky;
+        top: 0px;
+        font-size: 8px;
+        margin-top: 60px;
+    }
+    li {
+        display: inline-block;
+        height: 35px;
+        margin-top: 0px;
+        line-height: 35px;    
+    }
+    
+    ul{
+        padding-top: 0px;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    #menu #goTop {
+        display: none;
+    }
+
+    .contenu #goTop {
+        position: relative;
+        top: 19px;
+        float: right;
+        padding-right: 100px
+    }
+
+    .contenu {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .gridbooks {
+        grid-template-columns: 1fr;
+        grid-template-columns: 10fr;
+        padding-left: 0;
+    }
+
+    .worldimg, .worldtxt, .wellstxt, .wellsimg, .tomimg, .tomtxt, .rlstxt, .rlsimg, .hilltxt, .hillimg {
+        grid-area: auto;
+        display: block;
+    }
+
+    .gridbooks img {
+        padding-left: 30px;
+        height: 270px;
+        margin-top: 250px;
+    }
+
+    #pasmob {
+        display: none;
+    }
+}
+
+@media (max-height: 550px) {
+    #menu {
+        overflow: scroll;
+    }
+    
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Livre au hasard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Buenard&family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div id="main">
+        <div class="banner">
+            Booknook
+        </div>
+        <nav id="menu">
+            
+            <ul>
+                <li><img src="img/top2.png" onclick="buttonTop()" id="goTop" title="Go to top"></img></li>
+                <li><a href="./index.html"> Accueil </a></li>
+                <li><a href="./tips.html">Conseils</a></li>
+                <li><a href="./find.html">Où trouver des livres</a></li>
+                <li><a href="./random.html" class="active">Livre au hasard</a></li>              
+                <li><a href="./books.html">Critiques</a></li>
+            </ul>
+        </nav>
+        <div class="contenu">
+            <h1>Livre au hasard</h1>
+            <p>En manque d'inspiration pour votre prochaine lecture? A l'aide de notre outil, vous pouvez obtenir un livre au hasard. 
+                Les livres qui vous seront conseillés sont issus d'une liste crée à partir de plusieurs listes des meilleurs livres à lire. Si le livre chosi ne vous tente pas, pas de problème, il suffit de cliquer à nouveau pour en obtenir un autre.
+                Chaque livre que vous passez sera supprimé de la liste pour ne plus que vous tombiez dessus.
+                Si vous avez déjà des livres à lire vous pouvez les ajouter individuellement dans le champs en dessous. Vous pouvez aussi vider la liste pour mettre uniquement des livres personnels.
+                Pour remettre tout à zéro, rechargez simplement la page.</p>
+            <button class="pgrdm" id="btn1" onclick="getBook()"> Livre au hasard </button>
+            <button id="empty" onclick="emptyBooks()">Vider la liste de livres</button>
+            <p id="resultat"></p>
+            <input type="text" id="perso" class="pgrdm" name="perso" onfocus="this.value=''">
+            <button onclick="addBook()">Ajouter un livre</button>
+            <img src="img/top2.png" onclick="buttonTop()" id="goTop" title="Go to top"></img>
+            
+       </div>
+        <div class="footer">
+            <p id="nopad">© 2020-2021 - Lisa Delattre - Booknook </p>
+        </div>
+    </div>
+</body>
+</html>
